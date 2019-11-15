@@ -3,6 +3,7 @@ class TodolistsController < ApplicationController
   def new
   	@list = List.new
   end
+
   def create
         # ストロングパラメーターを使用
          list = List.new(list_params)
@@ -11,6 +12,10 @@ class TodolistsController < ApplicationController
         # トップ画面へリダイレクト
         redirect_to '/top'
     end
+
+ 
+
+
     private
    
     def list_params
